@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Grid Calculator</title>
+
+<style type="text/css">
+<!--
+#container
+{
+  height: 215px;
+  position: relative;
+  width: 320px;
+}
+#viewport
+{
+  height: 215;
+  width: 320;
+}
+#controlsxx
+{
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+-->
+</style>
+
+
+
+</head>
+
+
+
+<body>
+<div id="container">
+    <canvas id="viewport" height="215" width="320">
+    </canvas>
+        <div id="controls" style="
+  left: 100px;
+  position: relative;
+  width: 100%;">
+            <form>
+                <input id="startgrid" name="NW" type="radio" value="NW">
+                <input id="startgrid" name="NE" type="radio" value="NE">
+                <input id="startgrid" name="SE" type="radio" value="SE">
+                <input id="startgrid" name="SW" type="radio" value="SW" style="position:absolute; top:10;">
+            </form>
+        </div>
+</div>
+
+
+
+
+<script>
+var canvas = document.getElementById("viewport");
+var context = canvas.getContext("2d");
+
+
+context.fillStyle = "#cbffcb"; // a blue fill color
+context.strokeStyle = "#ccc"; // a gray stroke color
+context.fillRect(0,0,320,215);
+
+context.beginPath();
+context.moveTo(50, 50);
+context.lineTo(250, 50);
+context.moveTo(50, 130);
+context.lineTo(250, 130);
+
+context.moveTo(75, 25);
+context.lineTo(75, 150);
+context.moveTo(225, 25);
+context.lineTo(225, 150);
+
+context.strokeStyle = "#00f";
+context.lineWidth = 1;
+context.stroke();
+
+context.fillStyle = "#000"; // a blue fill color
+context.font = "16px sans-serif";
+//easting west
+context.fillText("88888", 0, 55);
+//easting east
+context.fillText("88888", 0, 135);
+// northing north
+context.fillText("88888", 55, 20);
+// norting south
+context.fillText("88888", 205, 20);
+
+
+</script>
+</body>
+
+</html>
