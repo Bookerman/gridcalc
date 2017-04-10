@@ -1,0 +1,39 @@
+			easting_left		easting_right
+
+northing_top
+
+northing_btm
+
+startgrid_easting		ew_dist
+startgrid_northing		ns_dist
+
+
+If start corner = nw
+easting_left = startgrid_easting  // plus nothing
+easting_right = startgrid_easting - ew_dist
+northing_top = startgrid_northing  // plus nothing
+northing_btm = startgrid_northing  - ns_dist
+
+
+if start corner = ne
+easting_left = startgrid_easting   - ew_dist
+easting_right = startgrid_easting   // plus nothing
+northing_top = startgrid_northing   // plus nothing
+northing_btm = startgrid_northing - ns_dist
+
+
+
+if start corner = se
+easting_left = startgrid_easting - ew_dist
+easting_right = startgrid_easting  // plus nothing
+northing_top = startgrid_northing  + ns_dist
+northing_btm = startgrid_northing  // plus nothing
+
+
+
+if start corner = sw
+easting_left = startgrid_easting  // plus nothing
+easting_right = startgrid_easting  + ew_dist
+northing_top = startgrid_northing + ns_dist
+northing_btm = startgrid_northing  // plus nothing
+
